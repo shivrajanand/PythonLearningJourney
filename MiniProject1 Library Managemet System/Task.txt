@@ -1,0 +1,17 @@
+#Leture number 72 @codeWithHarry
+
+Mini Project - 1: Create a library management system using OOPS
+
+Parts of project:
+1. A basic class library
+2. Method to display books
+3. Method to lend books - who owns the books if not present in library
+4. Method to donate books => Create an addbook function
+5. Return book function
+
+library_instance = library_class(list_of_books, library_name)
+
+6. Maintain a dictionary key = books, value = lender's library_name
+7. Customer id must be created
+
+Create a main function and run an infinite while loop asking user for their input og method for 4 methods
