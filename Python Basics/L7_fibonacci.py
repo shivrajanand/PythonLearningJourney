@@ -11,21 +11,22 @@ def fibonacci(n):
 
 
 if __name__ == '__main__':
-    # num = int(input("Enter term index of Fibonacci serries: "))
+    num = int(input("Enter term index of Fibonacci serries: "))
 
-    # print(fibonacci(num))
+    print(fibonacci(num))
     x_list = []
     y_list = []
-    for i in range(1, 51):
+    for i in range(1, num+1):
         val = fibonacci(i)
         print(val, end=", ")
         x_list.append(i)
         y_list.append(val)
 
 
-plt.plot(x_list, y_list)
-plt.show()
+    plt.plot(x_list, y_list)
+    plt.show()
 
-
+    # for i in range(4):
+    #     print(fibonacci(i))
 
 
