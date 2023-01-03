@@ -1,6 +1,6 @@
 from library import *
 from functions import *
-import sys
+import os
 
 # Customer Instances
 shivraj_lbl = vishal_lbl = syed_lbl = abhishek_lbl = tanya_lbl = manya_lbl = ekta_lbl = sonali_lbl = []
@@ -179,7 +179,13 @@ def main():
             elif choice1 == 2:
                 clearScreen()
                 print("LIBRARY CLOSED! PLEASE COME AGAIN SOON")
-                sys.modules[__name__].__dict__.clear()
+
+                #Clear all pyc files
+                os.system(
+                    f"python -Bc \"import pathlib; [p.unlink() for p in pathlib.Path('.').rglob('*.py[co]')]\"")
+                #Clear all pycache folders
+                os.system(
+                    f"python -Bc \"import pathlib; [p.rmdir() for p in pathlib.Path('.').rglob('__pycache__')]\"")
                 exit()
             else:
                 print("Wrong choice")
